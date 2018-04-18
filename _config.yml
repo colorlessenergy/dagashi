@@ -1,0 +1,7 @@
+baseurl: '/dagashi'
+
+
+collections:
+  candy:
+    output: true
+    permalink: /candy/:path

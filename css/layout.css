@@ -1,0 +1,4 @@
+.hero-bgimg{
+  background-image: url("{{ site.baseurl }}/images/group-pic.jpg");
+  height: 90vh;
+}

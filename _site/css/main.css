@@ -1,0 +1,15 @@
+body {
+  background-color:  #f9fafa;
+  font-family: 'Roboto', sans-serif;
+
+  letter-spacing: .4px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.hero-bgimg{
+  background-image: url("/images/group-pic.jpg");
+  height: 90vh;
+}
+
+

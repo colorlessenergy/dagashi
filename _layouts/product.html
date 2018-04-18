@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<nav>
+  <ul>
+    <li> <a href="{{ site.baseurl }}/index.html">Home</a> </li>
+    <li> <a href="">{{ page.title }}</a> </li>
+  </ul>
+</nav>
+
+<section>
+  <div>
+    <img src="{{ page.thumbnail }}" alt="{{ page.title }}">
+
+    <p> {{ page.description }} </p>
+  </div>
+  <div>
+    <h2> {{ page.title }} </h2>
+    <p> {{ page.custom-id }} </p>
+
+    <p> {{ page.price }} </p>
+
+    <p>quantity</p>
+
+    <input type="number" value="1">
+
+    <button type="button" name="button"> add to cart</button>
+
+    <div>
+      <p>Product info</p>
+
+      <p>refund policy</p>
+
+      <p>shipping info</p>
+    </div>
+  </div>
+</section>
