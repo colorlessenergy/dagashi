@@ -17,7 +17,7 @@ layout: default
 
   <section>
     {% for candies in site.candy %}
-      <a href="{{ candies.url }}">
+      <a href="{{ site.baseurl }}{{ candies.url }}">
         <div>
           <img src="{{ site.baseurl }}{{ candies.thumbnail }}" alt=" {{ candies.title }} ">
           <p> {{ candies.title }} </p>
