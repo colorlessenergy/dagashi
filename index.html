@@ -16,7 +16,7 @@ layout: default
 
 
   <section>
-    {% for candies in site.candy %}
+    {% for candies in site.candy limit:3 %}
       <a href="{{ site.baseurl }}{{ candies.url }}">
         <div>
           <img src="{{ site.baseurl }}{{ candies.thumbnail }}" alt=" {{ candies.title }} ">
@@ -25,5 +25,7 @@ layout: default
         </div>
       </a>
     {% endfor %}
+
+    <p> <a href="{{ site.baseurl }}/shop.html">All candies</a> </p>
   </section>
 </section>
