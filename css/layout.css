@@ -1,6 +1,10 @@
 .hero-bgimg{
+  align-items: center;
   background-image: url("{{ site.baseurl }}/images/group-pic.jpg");
-  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 80vh;
 }
 
 .responsive-nav__list-items {
@@ -9,5 +13,5 @@
   list-style-type: none;
   padding: 0;
   margin-top: 100px;
-  margin-left: 30px;
+  text-align: center;
 }

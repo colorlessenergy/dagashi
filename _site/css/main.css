@@ -50,8 +50,12 @@ ul li a:hover {
 }
 
 .hero-bgimg{
+  align-items: center;
   background-image: url("/images/group-pic.jpg");
-  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 80vh;
 }
 
 .responsive-nav__list-items {
@@ -60,9 +64,42 @@ ul li a:hover {
   list-style-type: none;
   padding: 0;
   margin-top: 100px;
-  margin-left: 30px;
+  text-align: center;
 }
 
+.head-title {
+  margin-left: 10px;
+}
+
+.head-title__cta {
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 12px 13px;
+  transition: background-color 0.5s ease;
+}
+
+.head-title__cta:hover {
+  background-color: rgba(151, 251, 151, 0.8);
+}
+
+.head-title__title {
+  color: #fff;
+  font-size: 58px;
+  font-weight: 300;
+  max-width: 361px;
+  line-height: 1;
+}
+
+.head-title__title span {
+  font-weight: 800;
+}
+
+@media screen and (min-width: 961px) {
+  .head-title {
+    margin-left: 50px;
+  }
+}
 
 .responsive-nav {
   background-color: rgba(255, 255, 255, 0.9);

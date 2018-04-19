@@ -1,0 +1,33 @@
+.head-title {
+  margin-left: 10px;
+}
+
+.head-title__cta {
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 12px 13px;
+  transition: background-color 0.5s ease;
+}
+
+.head-title__cta:hover {
+  background-color: rgba(151, 251, 151, 0.8);
+}
+
+.head-title__title {
+  color: #fff;
+  font-size: 58px;
+  font-weight: 300;
+  max-width: 361px;
+  line-height: 1;
+}
+
+.head-title__title span {
+  font-weight: 800;
+}
+
+@media screen and (min-width: 961px) {
+  .head-title {
+    margin-left: 50px;
+  }
+}
