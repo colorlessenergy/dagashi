@@ -10,22 +10,21 @@ layout: default
     <p class="head-title__p"> <a class="head-title__cta" href="{{ site.baseurl }}/shop.html">shop now</a> </p>
   </div>
 </header>
-<section>
-  <h2> / best sellers </h2>
+<section class="center">
+  <h2 class="subtitle"> / best sellers </h2>
   <p>The best candy in the world!!</p>
 
 
-  <section>
+  <section class="candy">
     {% for candies in site.candy limit:3 %}
       <a href="{{ site.baseurl }}{{ candies.url }}">
         <div>
-          <img src="{{ site.baseurl }}{{ candies.thumbnail }}" alt=" {{ candies.title }} ">
-          <p> {{ candies.title }} </p>
-          <p>$ {{ candies.price }}</p>
+          <img class="candy__img" src="{{ site.baseurl }}{{ candies.thumbnail }}" alt=" {{ candies.title }} ">
+          <p class="candy__name"> {{ candies.title }} </p>
+          <p class="candy__price">$ {{ candies.price }}</p>
         </div>
       </a>
     {% endfor %}
-
-    <p> <a href="{{ site.baseurl }}/shop.html">All candies</a> </p>
   </section>
+  <p class="candy__p "> <a class="candy__cta" href="{{ site.baseurl }}/shop.html">All candies</a> </p>
 </section>
