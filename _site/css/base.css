@@ -1,3 +1,8 @@
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 body {
   background-color:  #f9fafa;
   font-family: 'Roboto', sans-serif;
@@ -5,4 +10,41 @@ body {
   letter-spacing: .4px;
   line-height: 1.5;
   margin: 0;
+}
+
+nav {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 12.4px;
+}
+
+ul li a {
+  color: #000;
+  text-decoration: none;
+
+  transition: color 0.5s ease;
+}
+
+ul li a:hover {
+  color: #f58bc4;
+}
+
+
+@media screen and (min-width: 961px) {
+  nav ul {
+    display: block;
+  }
 }

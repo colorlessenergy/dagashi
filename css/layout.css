@@ -2,3 +2,12 @@
   background-image: url("{{ site.baseurl }}/images/group-pic.jpg");
   height: 90vh;
 }
+
+.responsive-nav__list-items {
+  color: #fff;
+  font-size: 35px;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 100px;
+  margin-left: 30px;
+}

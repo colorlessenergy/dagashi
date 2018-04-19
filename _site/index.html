@@ -8,6 +8,14 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- font awesome -->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <!-- custom js -->
+    <script src="/main.js" charset="utf-8" defer></script>
   </head>
   <body>
     <nav>
@@ -25,8 +33,25 @@
     <li> <a href="#">facebook</a> </li>
     <li> <a href="#">youtube</a> </li>
 
+    <li> <a href="#"><i class="fa fa-shopping-bag"></i></a> </li>
+
   </ul>
+
+  <svg id="menu-hamburger" viewBox="0 0 26 17" width="30px" height="100%">
+    <rect class="hamburger-menu__rect1" x="3" width="20" height="3" rx="1.5" ry="1.5"></rect>
+    <rect class="hamburger-menu__rect2" x="3" y="14" width="20" height="3" rx="1.5" ry="1.5"></rect>
+    <rect class="hamburger-menu__rect3" y="7" width="26" height="3" rx="1.5" ry="1.5"></rect>
+  </svg>
 </nav>
+
+<div class="responsive-nav">
+  <ul class="responsive-nav__list-items">
+    <li> <a href="">home</a> </li>
+    <li> <a href="/shop.html">shop</a> </li>
+    <li> <a href="/about.html">about me</a> </li>
+    <li> <a href="/contact.html">contact</a> </li>
+  </ul>
+</div>
 
     <header class="hero-bgimg">
   <div>
@@ -120,9 +145,9 @@
     </p>
 
     <ul>
-      <li>facebook</li>
-      <li>instagram</li>
-      <li>youtube</li>
+      <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
+      <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
+      <li> <a href="#"><i class="fab fa-youtube"></i></a> </li>
     </ul>
   </div>
 </footer>
