@@ -12,6 +12,11 @@ body {
   margin: 0;
 }
 
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 nav {
   align-items: center;
   background-color: #fff;
@@ -74,9 +79,8 @@ ul li a:hover {
 
 .candy {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
-  margin: 30px;
 }
 
 .candy__cta {
@@ -145,6 +149,11 @@ ul li a:hover {
 }
 
 @media screen and (min-width: 961px) {
+
+  .candy {
+    margin: 30px;
+  }
+  
   .head-title {
     margin-left: 50px;
   }

@@ -12,6 +12,11 @@ body {
   margin: 0;
 }
 
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 nav {
   align-items: center;
   background-color: #fff;
