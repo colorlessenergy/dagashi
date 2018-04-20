@@ -1,6 +1,7 @@
 .hero-bgimg{
   align-items: center;
-  background-image: url("{{ site.baseurl }}/images/group-pic.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .2)),
+                    url("{{ site.baseurl }}/images/group-pic.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
