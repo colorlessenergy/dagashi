@@ -72,8 +72,8 @@
   }
 
   .contact {
+    flex-direction: row;
     padding: 30px;
-
   }
 
   .mobile {
