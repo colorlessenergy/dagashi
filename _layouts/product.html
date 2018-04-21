@@ -2,37 +2,108 @@
 layout: default
 ---
 
-<nav>
-  <ul>
-    <li> <a href="{{ site.baseurl }}/index.html">Home</a> </li>
-    <li> <a href="">{{ page.title }}</a> </li>
-  </ul>
-</nav>
+<main class="contain-product desktop">
+  <section class="subnav">
+    <ul>
+      <li class="subnav__li"> <a href="{{ site.baseurl }}/index.html">Home</a> </li>
+      <li class="subnav__li">/</li>
+      <li class="subnav__li"> <a class="subnav__item" href="">{{ page.title }}</a> </li>
+    </ul>
+  </section>
 
-<section>
-  <div>
-    <img src="{{ site.baseurl }}/../{{ page.thumbnail }}" alt="{{ page.title }}">
+  <section class="product">
+    <div class="product__visual">
+      <img src="../{{ page.thumbnail }}" alt="{{ page.title }}">
 
-    <p> {{ page.description }} </p>
-  </div>
-  <div>
-    <h2> {{ page.title }} </h2>
-    <p> {{ page.custom-id }} </p>
-
-    <p> {{ page.price }} </p>
-
-    <p>quantity</p>
-
-    <input type="number" value="1">
-
-    <button type="button" name="button"> add to cart</button>
-
-    <div>
-      <p>Product info</p>
-
-      <p>refund policy</p>
-
-      <p>shipping info</p>
+      <p> {{ page.description }} </p>
     </div>
-  </div>
-</section>
+    <div class="product__info">
+      <h2 class="product__title"> {{ page.title }} </h2>
+      <p class="product__id"> {{ page.custom-id }} </p>
+
+      <p class="product__price">${{ page.price }} </p>
+
+      <div class="buying">
+        <p class="buying__title">quantity</p>
+
+        <input class="buying__input" type="number" value="1">
+
+        <button class="buying__button" type="button" name="button"> add to cart</button>
+      </div>
+
+      <div class="more-info">
+        <div class="more-info__product">
+          <p class="more-info__title">refund policy</p>
+          <p class="more-info__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+           </p>
+        </div>
+
+        <div class="more-info__product">
+          <p class="more-info__title">shipping info</p>
+          <p class="more-info__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main class="contain-product mobile">
+  <section class="subnav">
+    <ul>
+      <li class="subnav__li"> <a href="{{ site.baseurl }}/index.html">Home</a> </li>
+      <li class="subnav__li">/</li>
+      <li class="subnav__li"> <a class="subnav__item" href="">{{ page.title }}</a> </li>
+    </ul>
+  </section>
+
+  <section class="product">
+    <div class="product__visual">
+      <h2 class="product__title"> {{ page.title }} </h2>
+      <p class="product__id"> {{ page.custom-id }} </p>
+
+      <p class="product__price">${{ page.price }} </p>
+
+      <img class="product__img" src="../{{ page.thumbnail }}" alt="{{ page.title }}">
+
+      <p> {{ page.description }} </p>
+    </div>
+    <div class="product__info">
+
+
+      <div class="buying">
+        <p class="buying__title">quantity</p>
+
+        <input class="buying__input" type="number" value="1">
+
+        <button class="buying__button" min="1" value="1" type="button" name="button"> add to cart</button>
+      </div>
+
+      <div class="more-info">
+        <div class="more-info__product">
+          <p class="more-info__title">refund policy</p>
+          <p class="more-info__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+           </p>
+        </div>
+
+        <div class="more-info__product">
+          <p class="more-info__title">shipping info</p>
+          <p class="more-info__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

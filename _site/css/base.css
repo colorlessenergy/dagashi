@@ -45,6 +45,10 @@ nav ul li {
   margin: 0 12.4px;
 }
 
+ul {
+  padding: 0;
+}
+
 ul li a {
   color: #000;
   text-decoration: none;

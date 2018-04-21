@@ -45,6 +45,10 @@ nav ul li {
   margin: 0 12.4px;
 }
 
+ul {
+  padding: 0;
+}
+
 ul li a {
   color: #000;
   text-decoration: none;
@@ -66,6 +70,15 @@ ul li a:hover {
   }
 }
 
+.center {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.contain-product {
+  margin: 30px 25px;
+}
+
 .hero-bgimg{
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .2)),
@@ -74,6 +87,17 @@ ul li a:hover {
   background-position: center;
   display: flex;
   height: 80vh;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__img {
+  max-height: 400px;
+  max-width: 400px;
+  width: 100%;
 }
 
 .responsive-nav__list-items {
@@ -85,9 +109,68 @@ ul li a:hover {
   text-align: center;
 }
 
-.center {
-  text-align: center;
-  padding: 40px 0;
+/* shop */
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 961px) {
+  .contain-product {
+    margin: 30px 40px;
+    padding: 30px 40px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .product {
+    flex-direction: row;
+  }
+
+  .product__visual {
+    margin-right: 20px;
+    width: 55%;
+  }
+
+  .product__info {
+    margin-left: 20px;
+    width: 45%;
+  }
+
+}
+
+.buying {
+  display: flex;
+  flex-direction: column;
+}
+
+.buying__button {
+  background-color: rgba(25,25,25,1);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  margin: 20px 0;
+  padding: 20px 25px;
+  width: 80%;
+  text-transform: uppercase;
+}
+
+.buying__title {
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+
+.buying__input {
+  width: 10%;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .candy {
@@ -191,6 +274,32 @@ ul li a:hover {
   margin: 0 25px;
 }
 
+.more-info__title {
+  text-transform: uppercase;
+}
+
+.more-info__desc {
+  font-weight: 100;
+  font-size: 13px;
+  max-width: 650px;
+}
+
+.product__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.product__id {
+  color: #191919;
+  margin: 5px 0;
+}
+
+.product__price {
+  font-weight: 100;
+  margin: 25px 0;
+}
+
 .newsletter {
   border: none;
   color: #000;
@@ -206,6 +315,15 @@ ul li a:hover {
 
 .newsletter__button:hover {
   color: #fff;
+}
+
+.subnav__li {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.subnav__item {
+  color: #868686;
 }
 
 @media screen and (min-width: 961px) {

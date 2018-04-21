@@ -1,6 +1,6 @@
 ---
 custom-id: umaibo-vegetable-salad
-title: umaibo-vegetable-salad
+title: umaibo vegetable salad
 price: '1.00'
 categories: candy umaibo-vegetable-salad
 type: candy

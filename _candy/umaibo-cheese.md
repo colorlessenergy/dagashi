@@ -1,6 +1,6 @@
 ---
 custom-id: umaibo-cheese
-title: umaibo-cheese
+title: umaibo cheese
 price: '0.50'
 categories: candy umaibo-cheese
 type: candy
