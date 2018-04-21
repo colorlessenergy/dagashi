@@ -23,7 +23,7 @@ footer div:last-child {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  /* grid-column: 1 / 5; */
+  grid-column: 1 / -1;
 }
 
 nav {

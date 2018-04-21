@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
+  text-align: center;
 }
 
 .candy__cta {
@@ -91,6 +92,7 @@
 .footer__social {
   display: flex;
   list-style-type: none;
+  padding: 0;
 }
 
 .footer__social li {

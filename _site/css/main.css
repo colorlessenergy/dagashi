@@ -23,7 +23,7 @@ footer div:last-child {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  /* grid-column: 1 / 5; */
+  grid-column: 1 / -1;
 }
 
 nav {
@@ -94,6 +94,7 @@ ul li a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
+  text-align: center;
 }
 
 .candy__cta {
@@ -183,6 +184,7 @@ ul li a:hover {
 .footer__social {
   display: flex;
   list-style-type: none;
+  padding: 0;
 }
 
 .footer__social li {
