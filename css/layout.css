@@ -7,6 +7,28 @@
   margin: 30px 25px;
 }
 
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 30px 50px;
+}
+
+.contact__info div {
+  margin-bottom: 40px;
+}
+
+.contact__title {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.contact__p {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
 .hero-bgimg{
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .2)),
@@ -47,6 +69,10 @@
   .contain-product {
     margin: 30px 40px;
     padding: 30px 40px;
+  }
+
+  .contact {
+    padding: 30px;
   }
 
   .mobile {

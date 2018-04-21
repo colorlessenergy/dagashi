@@ -3,24 +3,27 @@ layout: default
 ---
 
 
-<section>
+<section class="contact">
   <div>
-    <h2> / have a question?</h2>
+    <h2 class="contact__title"> / have a question?</h2>
 
     <p>
       have any questions shoot a message down below.
     </p>
 
-    <form action="https://formspree.io/theluckorange@yahoo.com"
+  <form action="https://formspree.io/theluckorange@yahoo.com"
       method="POST">
-      <input type="text" name="name" placeholder="name">
-      <input type="email" name="_replyto" placeholder="email">
+      <div>
+        <input type="text" name="name" placeholder="name">
+        <input type="email" name="_replyto" placeholder="email">
+      </div>
+      <textarea id="message" name="message" rows="8" cols="80" placeholder="message..."></textarea>
       <input type="submit" value="Send">
   </form>
   </div>
-  <div>
+  <div class="contact__info">
     <div>
-      <p>contact me</p>
+      <p class="contact__p ">contact me</p>
 
       <ul>
         <li> tel: 123-456-7890 </li>
@@ -28,7 +31,7 @@ layout: default
       </ul>
     </div>
     <div>
-      <p>operating hours</p>
+      <p class="contact__p ">operating hours</p>
 
       <ul>
         <li> Mon - Fri: 7am - 10pm  </li>
@@ -38,7 +41,7 @@ layout: default
     </div>
 
     <div>
-      <p>address</p>
+      <p class="contact__p ">address</p>
 
       <ul>
         <li> Long Beach, California </li>
