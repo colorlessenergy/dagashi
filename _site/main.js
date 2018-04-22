@@ -22,16 +22,23 @@ cartOpen.addEventListener("click", function () {
 });
 // snipcart
 
-var cartd = document.querySelector(".cart__content")
+var cartd = document.querySelector(".cart__content");
+
+// the value of the input qunatity update the value in the cart
+$('.desktop .buying__input').change(function() {
+  $('.desktop .buying__button').data('item-quantity', $(this).val());
+});
 
 document.addEventListener('snipcart.ready', function() {
-    console.log(Snipcart.api.items.all());
     createItemCart(Snipcart.api.items.all(), cartd)
     Snipcart.subscribe('item.added', function (item) {
+      console.log(item, Snipcart.api.items.all());
       createItemCart(Snipcart.api.items.all(), cartd)
       cartshow.classList.toggle("menu-open");
     });
 });
+
+// create the meta data for each item in the quick cart.
 
 function createItemCart(obj, append) {
   append.innerHTML = "";
@@ -56,3 +63,7 @@ function createItemCart(obj, append) {
   });
 
 }
+// // remove item
+//
+// // Snipcart.api.items.remove('SMARTPHONE')
+// //     .then(function (item) { console.log(item); });
