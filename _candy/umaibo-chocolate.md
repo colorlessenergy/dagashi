@@ -1,6 +1,7 @@
 ---
 custom-id: umaibo-chocolate
 title: umaibo chocolate
+weight: 5
 price: '1.00'
 categories: candy umaibo-chocolate
 type: candy

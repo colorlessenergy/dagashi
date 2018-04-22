@@ -27,8 +27,17 @@ layout: default
         <p class="buying__title">quantity</p>
 
         <input class="buying__input" type="number" value="1">
-
-        <button class="buying__button" type="button" name="button"> add to cart</button>
+        <button
+          class="buying__button snipcart-add-item"
+          data-item-id="{{ page.id }}"
+          data-item-name="{{ page.title }}"
+          data-item-price="{{ page.price }}"
+          data-item-weight="{{ page.weight }}"
+          data-item-url="{{ page.url }}"
+          data-item-image="{{site.baseurl}}{{ page.thumbnail }}" data-item-quantity="1"
+          data-item-description="{{ page.title }}">
+              Buy {{ page.title }}
+      </button>
       </div>
 
       <div class="more-info">
