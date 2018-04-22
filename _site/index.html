@@ -17,7 +17,7 @@
     <!-- snipcart -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="ZDQyMWExYjItMzFjNC00NGRmLTg5ZGUtY2VhOWQyZDU5Nzg3NjM2NTk5NDgyNDcyNzk5NTI4"></script>
+    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="ZDQyMWExYjItMzFjNC00NGRmLTg5ZGUtY2VhOWQyZDU5Nzg3NjM2NTk5NDgyNDcyNzk5NTI4" data-autopop="false"></script>
 
     <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
     <!-- custom js -->
@@ -39,7 +39,7 @@
     <li> <a href="#">facebook</a> </li>
     <li> <a href="#">youtube</a> </li>
 
-    <li> <a href="#"><i class="fa fa-shopping-bag"></i></a> </li>
+    <li> <a id="shopping-bag" href="#"><i class="fa fa-shopping-bag"></i></a> </li>
 
   </ul>
 
@@ -57,6 +57,20 @@
     <li> <a href="/about.html">about me</a> </li>
     <li> <a href="/contact.html">contact</a> </li>
   </ul>
+</div>
+
+<div class="cart">
+  <div class="cart__nav">
+    <p class="cart__open">></p>
+    <h2 class="cart__title">Cart</h2>
+  </div>
+  <div class="cart__content">
+
+  </div>
+  <div class="snipcart-summary">
+      Total price: <span class="snipcart-total-price"></span>
+  </div>
+  <p> <a href="/cart.html">view cart</a> </p>
 </div>
 
     <header class="hero-bgimg">

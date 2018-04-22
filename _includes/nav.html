@@ -13,7 +13,7 @@
     <li> <a href="#">facebook</a> </li>
     <li> <a href="#">youtube</a> </li>
 
-    <li> <a href="#"><i class="fa fa-shopping-bag"></i></a> </li>
+    <li> <a id="shopping-bag" href="#"><i class="fa fa-shopping-bag"></i></a> </li>
 
   </ul>
 
@@ -31,4 +31,18 @@
     <li> <a href="{{ site.baseurl }}/about.html">about me</a> </li>
     <li> <a href="{{ site.baseurl }}/contact.html">contact</a> </li>
   </ul>
+</div>
+
+<div class="cart">
+  <div class="cart__nav">
+    <p class="cart__open">></p>
+    <h2 class="cart__title">Cart</h2>
+  </div>
+  <div class="cart__content">
+
+  </div>
+  <div class="snipcart-summary">
+      Total price: <span class="snipcart-total-price"></span>
+  </div>
+  <p> <a href="{{ site.baseurl }}/cart.html">view cart</a> </p>
 </div>
