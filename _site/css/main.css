@@ -117,6 +117,10 @@ ul li a:hover {
   margin: 0 auto;
 }
 
+.cart__a {
+  color: #fff;
+}
+
 .center {
   text-align: center;
   padding: 40px 0;

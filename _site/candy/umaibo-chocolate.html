@@ -17,11 +17,13 @@
     <!-- snipcart -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="ZDQyMWExYjItMzFjNC00NGRmLTg5ZGUtY2VhOWQyZDU5Nzg3NjM2NTk5NDgyNDcyNzk5NTI4"></script>
+    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="ZDQyMWExYjItMzFjNC00NGRmLTg5ZGUtY2VhOWQyZDU5Nzg3NjM2NTk5NDgyNDcyNzk5NTI4" data-autopop="false"></script>
 
     <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
     <!-- custom js -->
     <script src="/main.js" charset="utf-8" defer></script>
+
+    
   </head>
   <body>
     <nav>
@@ -70,7 +72,7 @@
   <div class="snipcart-summary">
       Total price: <span class="snipcart-total-price"></span>
   </div>
-  <p> <a href="/cart.html">view cart</a> </p>
+  <p class="cart__p"> <a class="cart__a" href="/cart.html">view cart</a> </p>
 </div>
 
     <main class="contain-product desktop">
@@ -106,8 +108,8 @@
           data-item-weight="5"
           data-item-url="/candy/umaibo-chocolate"
           data-item-image="/candies/umaibo-chocolate.jpg"
-          data-item-quantity="1"
-          data-item-description="umaibo chocolate">
+          data-item-description="umaibo chocolate"
+          data-item-quantity="1">
               Buy umaibo chocolate
       </button>
       </div>
@@ -160,10 +162,12 @@
 
       <div class="buying">
         <p class="buying__title">quantity</p>
-
         <input class="buying__input" type="number" value="1">
-
-        <button class="buying__button" min="1" value="1" type="button" name="button"> add to cart</button>
+        <button class="buying__button snipcart-add-item" data-item-id="umaibo-chocolate" data-item-name="umaibo chocolate" data-item-price="1.00"
+          data-item-weight="5" data-item-url="/candy/umaibo-chocolate" data-item-image="/candies/umaibo-chocolate.jpg"
+          data-item-description="umaibo chocolate" data-item-quantity="1">
+          Buy umaibo chocolate
+        </button>
       </div>
 
       <div class="more-info">

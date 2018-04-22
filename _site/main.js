@@ -24,9 +24,13 @@ cartOpen.addEventListener("click", function () {
 
 var cartd = document.querySelector(".cart__content");
 
-// the value of the input qunatity update the value in the cart
-$('.desktop .buying__input').change(function() {
-  $('.desktop .buying__button').data('item-quantity', $(this).val());
+// the value of the input quantity update the value in the cart
+$('.desktop .buying__input').change(function () {
+    $('.desktop .buying__button').data('item-quantity', $(this).val());
+});
+
+$('.mobile .buying__input').change(function () {
+  $('.mobile .buying__button').data('item-quantity', $(this).val());
 });
 
 document.addEventListener('snipcart.ready', function() {
@@ -52,7 +56,20 @@ function createItemCart(obj, append) {
     createQuantity.innerHTML = "quantity " + current.quantity;
     var createPrice = document.createElement("p");
     createPrice.innerHTML = "price " + current.price;
+    var createDelete = document.createElement("p");
+    createDelete.innerHTML = "x";
+    $(createDelete).data("item-id", current.id)
 
+    createDelete.addEventListener("click", function () {
+      Snipcart.api.items.remove($(this).data("item-id"))
+        .then(function (item) { 
+          // remove the items both in the subcart and the actual cart page
+          createItemCart(Snipcart.api.items.all(), cartd);
+          createItemCart(Snipcart.api.items.all(), document.querySelector(".checkout"))
+        });
+    })
+
+    allEle.push(createDelete);
     allEle.push(createTitle);
     allEle.push(createQuantity);
     allEle.push(createPrice);
@@ -63,7 +80,5 @@ function createItemCart(obj, append) {
   });
 
 }
-// // remove item
-//
-// // Snipcart.api.items.remove('SMARTPHONE')
-// //     .then(function (item) { console.log(item); });
+
+
