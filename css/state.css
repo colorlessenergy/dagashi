@@ -37,6 +37,21 @@
 }
 
 
+.opaque__screen {
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.5s ease;
+}
+
+.open-opaque {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 65%;
+  z-index: 2;
+}
+
+
 @media screen and (min-width: 961px) {
 
   #menu-hamburger {

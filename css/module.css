@@ -88,6 +88,32 @@
   margin: 0;
 }
 
+.template-checkout {
+  display: flex;
+}
+
+.template-checkout__cart {
+  display: flex;
+  width: 50%;
+}
+
+.template-checkout__cart img {
+  width: 200px;
+  height: 200px;
+}
+
+.template-checkout__price {
+  width: 20%;
+}
+
+.template-checkout__qty {
+  width: 20%;
+}
+
+.template-checkout__total {
+  width: 10%;
+}
+
 
 .head-title {
   margin-left: 10px;
