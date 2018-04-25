@@ -115,6 +115,7 @@ ul li a:hover {
 .cart .exit {
   border: 1px solid #000;
   border-radius: 50%;
+  cursor: pointer;
   margin-left: auto;
   margin-bottom: auto;
   margin-right: 10px;
@@ -178,11 +179,7 @@ ul li a:hover {
   margin: 0 40px;
 }
 
-.checkout-cart .snipcart-summary {
-  text-align: right;
-}
-
-.checkout-cart__p {
+.checkout-cart .snipcart-summary, .checkout-cart__p {
   text-align: right;
 }
 
@@ -341,7 +338,7 @@ ul li a:hover {
 }
 
 .buying__input {
-  width: 10%;
+  width: 15%;
   padding: 10px;
   margin: 10px 0;
 }

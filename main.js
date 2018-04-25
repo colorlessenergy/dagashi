@@ -86,10 +86,11 @@ function createCart(obj, append) {
 		obj.forEach(function (current) {
 		$(append)
 			.append(
-			'<div class= "template-checkout template-checkout-items"><div class="template-checkout__cart"><img src="' + current.image + '" alt=""><div class="cart__meta"><h2> ' + current.description + ' </h2><p> ID: ' + current.id + ' </p><p class="exit" data-item-id="'+ current.id + '">remove</p></div></div><p class="template-checkout__price">$' + current.price + '</p><div class="template-checkout__qty"><input type="number" value="' + Number(current.quantity) + '" class="buying__input"></div><p class="template-checkout__total">$' + current.totalPrice + '</p></div>'
+			'<div class= "template-checkout template-checkout-items"><div class="template-checkout__cart"><img src="' + current.image + '" alt=""><div class="cart__meta"><h2> ' + current.description + ' </h2><p> ID: ' + current.id + ' </p><p class="exit" data-item-id="' + current.id + '">remove</p></div></div><p class="template-checkout__price">$' + current.price + '</p><div class="template-checkout__qty"><input type="number" value="' + Number(current.quantity) + '" class="buying__input" data-item-id="' + current.id + '"></div><p class="template-checkout__total">$' + current.totalPrice + '</p></div>'
 			)
 
 			deleteItem(current);
+			updateItem(current);
 		});
 
 	};
@@ -108,4 +109,30 @@ function deleteItem(obj) {
 				createCart(Snipcart.api.items.all(), document.querySelector(".template-checkout-items"));
 			});
 	});
+}
+
+function updateItem(obj) {
+
+
+	$("input[data-item-id='" + obj.id + "']").change(function () {
+		Snipcart.api.items.update(obj.id, {
+			"quantity": Number(this.value),
+		}).then(function (item) {
+
+			if (item.quantity <= 0) {
+				Snipcart.api.items.remove(item.id)
+					.then(function () {
+						// remove the items both in the subcart and the actual cart page
+						createItemCart(Snipcart.api.items.all(), cartd);
+
+						createCart(Snipcart.api.items.all(), document.querySelector(".template-checkout-items"));
+					});
+			}
+
+			createItemCart(Snipcart.api.items.all(), cartd);
+			createCart(Snipcart.api.items.all(), document.querySelector(".template-checkout-items"));
+		});
+
+	});
+
 }
