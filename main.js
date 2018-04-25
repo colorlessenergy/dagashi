@@ -136,3 +136,9 @@ function updateItem(obj) {
 	});
 
 }
+
+Snipcart.subscribe('item.removed', function () {
+	createItemCart(Snipcart.api.items.all(), cartd);
+
+	createCart(Snipcart.api.items.all(), document.querySelector(".template-checkout-items"));
+});
