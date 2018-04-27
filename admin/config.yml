@@ -1,5 +1,5 @@
 backend:
-  name: colorlessenergy 
+  name: github 
   repo: colorlessenergy/dagashi
   branch: master
   accept_roles: #optional - accepts all users if left out
