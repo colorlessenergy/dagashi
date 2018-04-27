@@ -96,4 +96,8 @@ ul li a:hover {
   nav ul {
     display: block;
   }
+
+  h1 a {
+    display: none;
+  }
 }

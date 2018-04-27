@@ -52,10 +52,9 @@ document.addEventListener('snipcart.ready', function() {
 
       createItemCart(Snipcart.api.items.all(), cartd)
 			createCart(Snipcart.api.items.all(), $(".template-checkout-items"));
-
 			// toggle css to focus on the cart
 			cartshow.classList.toggle("menu-open");
-      $(".opaque__screen")[0].classList.toggle("open-opaque");
+			$(".opaque__screen")[0].classList.toggle("open-opaque");
     });
 });
 
@@ -86,9 +85,8 @@ function createCart(obj, append) {
 		obj.forEach(function (current) {
 		$(append)
 			.append(
-			'<div class= "template-checkout template-checkout-items"><div class="template-checkout__cart"><img src="' + current.image + '" alt=""><div class="cart__meta"><h2> ' + current.description + ' </h2><p> ID: ' + current.id + ' </p><p class="exit" data-item-id="' + current.id + '">remove</p></div></div><p class="template-checkout__price">$' + current.price + '</p><div class="template-checkout__qty"><input type="number" value="' + Number(current.quantity) + '" class="buying__input" data-item-id="' + current.id + '"></div><p class="template-checkout__total">$' + current.totalPrice + '</p></div>'
+			'<div class="template-checkout-item"><div class="template-checkout__cart"><img src="' + current.image + '" alt=""><div class="cart__meta"><h2> ' + current.description + ' </h2><p> ID: ' + current.id + ' </p><p class="exit" data-item-id="' + current.id + '">remove</p></div></div><p class="template-checkout__price"><span class="checkout__price">price:</span> $' + current.price + '</p><div class="template-checkout__qty"><p class="checkout__qty"> QTY </p><input type="number" value="' + Number(current.quantity) + '" class="buying__input buying__input--mobile" data-item-id="' + current.id + '"></div><p class="template-checkout__total"><span class="checkout__total">Total:</span> $' + current.totalPrice + '</p></div>'
 			)
-
 			deleteItem(current);
 			updateItem(current);
 		});
