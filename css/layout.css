@@ -63,6 +63,7 @@
 }
 
 .cart__open {
+  cursor: pointer;
   font-size: 20px;
   margin: 20px;
 }
